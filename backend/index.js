@@ -5,9 +5,11 @@ import projectController from "./project/project.controller.js";
 import userContoller from "./user/user.controller.js";
 import commentController from "./comment/comment.controller.js";
 import likeController from "./like/like.controller.js";
+import cors from "cors";
 
 dotenv.config();
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 connectDB();

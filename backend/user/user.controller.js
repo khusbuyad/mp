@@ -36,7 +36,7 @@ router.post("/login/", async (req, res) => {
     findUser.password
   );
   if (!isValidPassword) {
-    return res.status(400).send({ message: "Password incorrect" });
+    return res.status(401).send({ message: "Password incorrect" });
   }
   const payload = user.email;
   const token = jwt.sign(payload, process.env.secretkey);

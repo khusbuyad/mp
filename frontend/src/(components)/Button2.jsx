@@ -2,10 +2,11 @@ import React from "react";
 
 const Button2 = (props) => {
   return (
-    <div className=" bg-primary w-fit p-2 rounded-md">
+    <div className=" bg-primary w-full p-2 rounded-md text-center">
       <button
+        type={props?.type}
         className=" text-white font-semibold hover:font-bold "
-        onClick={props.click}
+        onClick={props?.click}
       >
         {props.name}
       </button>
