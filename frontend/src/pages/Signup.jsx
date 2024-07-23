@@ -2,10 +2,16 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
-const Signup = () => {
+const SignUp = () => {
   return (
     <Formik
-      initialValues={{ firstName: "", lastName: "", email: "" }}
+      initialValues={{
+        firstName: "",
+        lastName: "",
+        email: "",
+        password: "",
+        DOB: "",
+      }}
       validationSchema={Yup.object({
         firstName: Yup.string()
           .max(15, "Must be 15 characters or less")
@@ -56,4 +62,4 @@ const Signup = () => {
     </Formik>
   );
 };
-export default Signup;
+export default SignUp;
